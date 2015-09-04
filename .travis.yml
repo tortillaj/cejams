@@ -1,0 +1,12 @@
+language: go
+go:
+- 1.4.2
+script:
+- chmod ugo+x deploy.sh
+- '[ "${TRAVIS_PULL_REQUEST}" != "false" ] || ./deploy.sh'
+install:
+- export GOPATH=$HOME/go
+- go get -v github.com/spf13/hugo
+env:
+  global:
+    secure: BjWhR+F63tUoxsLuCUgFPXW5YrvboRzlqYY2F9PhknlS6jGXvq2FnaH/efhGNoLAMy2emcJM3ZP2P1hvHlBGooc0w8HkvJv77Oj239x9gkkGGUlMgnzo+Nt22X4yoHtPFL2q3SdSwbAHjdfwJfjyIyro0X5ExJ+yRBKBo+cSRYQ=
