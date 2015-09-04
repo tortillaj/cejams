@@ -23,4 +23,4 @@ git config user.email "travis@travis-ci.org"
 git config user.name "TravisCI"
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git subtree push --quiet --prefix public origin gh-pages > /dev/null 2>&1
+git subtree push --quiet --prefix=public origin gh-pages > /dev/null 2>&1
