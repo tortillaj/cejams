@@ -10,3 +10,6 @@ install:
 env:
   global:
     secure: BjWhR+F63tUoxsLuCUgFPXW5YrvboRzlqYY2F9PhknlS6jGXvq2FnaH/efhGNoLAMy2emcJM3ZP2P1hvHlBGooc0w8HkvJv77Oj239x9gkkGGUlMgnzo+Nt22X4yoHtPFL2q3SdSwbAHjdfwJfjyIyro0X5ExJ+yRBKBo+cSRYQ=
+branches:
+  only: 
+  - master
