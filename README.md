@@ -1,1 +1,1 @@
-# cejams
+# Personal website built with Hugo
