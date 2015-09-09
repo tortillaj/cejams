@@ -1,14 +1,18 @@
 language: go
 go:
-- 1.4.2
-script:
-- export GOPATH=$HOME/go
-- go get -v github.com/spf13/hugo
-- chmod ugo+x deploy.sh
-- '[ "${TRAVIS_PULL_REQUEST}" != "false" ] || ./deploy.sh'
-env:
-  global:
-    secure: BjWhR+F63tUoxsLuCUgFPXW5YrvboRzlqYY2F9PhknlS6jGXvq2FnaH/efhGNoLAMy2emcJM3ZP2P1hvHlBGooc0w8HkvJv77Oj239x9gkkGGUlMgnzo+Nt22X4yoHtPFL2q3SdSwbAHjdfwJfjyIyro0X5ExJ+yRBKBo+cSRYQ=
-branches:
-  only: 
-  - master
+- 1.4
+install:
+- go get github.com/spf13/hugo
+script: hugo -t casper
+deploy:
+  provider: s3
+  access_key_id: AKIAIIK6EQJ7VCHPRBDA
+  bucket: cejams
+  region: us-east-1
+  endpoint: cejams.s3-website-us-east-1.amazonaws.com
+  local-dir: public
+  skip_cleanup: true
+  on:
+    branch: master
+  secret_access_key:
+    secure: p+Cb9/ZPo+b9NbQcNkgnvHNEkebqAncyFmWymDiqkzboB3pHCBQ3ajopZrBuniXhV7w48qb53Y7/x9UgngwITHr7qwYtN6YdP77jJU/43I90opuPrvV54+YopZcjKYmw3T5+Zd9OH/k63/cI4+vKpi4U+7YfsBPXvElmQjVfyU5MIlQDJJVswrMXGv2afaZ7DMo+GXWpd72f4O38Ao6pBew7eEf9oaPCVY24D5ajNTjFEP02U43PUbnSku5cZ3JHNVNLaI9zAY8iR+3XS6eHokZ0NdoIlH/0SBL+s2WN2xWEMUFwqX1DJrR4fPeOkyWyQ51e+T+6gKhWJg+Qg2L5e182UKWrY4aVs70XiOKTkUm2AA+rasjS1s7YowCY8eXHjqvZZjqKwB+GCciWmgnrUv3MM7Ltsb7lOL7t48eY+orhyGllEyWCLgEEkE6F5q0jMsQjw6y78WxbNAoBar/nLY8RnxpYwZyEp3OlT4bdPUyzrmxHvPwDrBm0H+eofbcHalFtLqisD859eM7bpXvZQX+GLrvvEutLyU2ZyynbEVd3yYc0dpNJ36u9QkARSLN7J47BYBdVOCKlkgVHkAFQ/YazjxXdgYBSNQIt2BfDCy7deej2CEpQtMlo4bAds9St8Df4LL0M9r/cpO+CiVZI/COiclEshewcfXONUPHlZjg=
