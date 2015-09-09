@@ -9,9 +9,9 @@ script: hugo -t casper
 deploy:
   provider: s3
   access_key_id: AKIAIIK6EQJ7VCHPRBDA
-  bucket: cejams
+  bucket: ofjamescole.com
   region: us-east-1
-  endpoint: cejams.s3-website-us-east-1.amazonaws.com
+  endpoint: ofjamescole.com.s3-website-us-east-1.amazonaws.com
   local-dir: public
   skip_cleanup: true
   on:
