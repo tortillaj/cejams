@@ -14,6 +14,7 @@
   "devDependencies": {
     "browser-sync": "^2.5.2",
     "del": "^2.0.2",
+    "delete": "^0.2.1",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-changed": "^1.2.1",
@@ -32,6 +33,7 @@
     "path": "^0.11.14",
     "require-dir": "^0.3.0",
     "rev": "0.0.1",
-    "rev-del": "^1.0.4"
+    "rev-del": "^1.0.4",
+    "run-sequence": "^1.1.2"
   }
 }
