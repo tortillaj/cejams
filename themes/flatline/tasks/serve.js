@@ -11,8 +11,11 @@ gulp.task('serve', ['hugo:all'], function() {
         browser: ['google chrome']
     });
 
-    gulp.watch(['./layouts/**/*', '../../content/**/*', './archetypes/**/*', '../../config.toml', 'theme.toml'], ['hugo:draft'], browserSync.reload);
-    gulp.watch(['assets/scss/*.scss', 'assets/js/*.js', 'assets/img/*.*', 'assets/svg/*.svg', 'assets/layouts/**/*.html'], function() {
+    gulp.watch(['./layouts/**/*', '../../content/**/*', './archetypes/**/*', '../../config.toml', 'theme.toml'], function() {
+    	sequence('hugo:draft', browserSync.reload);
+    });
+
+    gulp.watch(['assets/scss/**/*.scss', 'assets/js/*.js', 'assets/img/*.*', 'assets/svg/*.svg', 'assets/layouts/**/*.html'], function() {
     	sequence('revision:clean', 'revision:create', ['revision:layouts', 'revision:styles'], 'hugo:draft', browserSync.reload);
     });
 });

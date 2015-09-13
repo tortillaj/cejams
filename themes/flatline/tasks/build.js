@@ -5,4 +5,4 @@ gulp.task('build:content', ['hugo:draft'], reload);
 
 gulp.task('build:all', ['revision', 'hugo:all']);
 
-gulp.task('build:publish', ['revision', 'hugo:live']);
+gulp.task('build:publish', ['hugo:publish']);

@@ -7,8 +7,12 @@ var size = require('gulp-size');
 var del = require('delete');
 var sequence = require('run-sequence');
 
-gulp.task('revision:clean', function() {
-  return del.sync('static');
+gulp.task('revision:clean', function () {
+  del.sync('static/css');
+  del.sync('static/js');
+  del.sync('static/fonts');
+  del.sync('static/img');
+  del.sync('static/rev-manifest.json');
 });
 
 gulp.task('revision:create', ['styles', 'scripts', 'images', 'svg', 'copy:fonts'], function () {
@@ -37,6 +41,6 @@ gulp.task('revision:styles', function () {
     .pipe(gulp.dest('./static/css'));
 });
 
-gulp.task('revision', function() {
+gulp.task('revision', function () {
   sequence('revision:clean', 'revision:create', ['revision:layouts', 'revision:styles']);
 });

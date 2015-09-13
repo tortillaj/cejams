@@ -30,13 +30,17 @@ gulp.task('hugo:all', ['revision'], function () {
 
 gulp.task('hugo:delete', function () {
   var dst = path.join(process.cwd(), '../../public');
-  del.sync(dst);
+  del.sync(dst, {force:true});
 });
 
-gulp.task('hugo:live', ['hugo:delete', 'revision'], function () {
+gulp.task('hugo:live', ['hugo:delete'], function () {
   hugo(false);
 });
 
 gulp.task('hugo:dev', function() {
 	sequence('revision', 'hugo:draft');
-})
+});
+
+gulp.task('hugo:publish', function() {
+  sequence('revision:clean', 'revision:create', ['revision:layouts', 'revision:styles'], 'hugo:live');
+});

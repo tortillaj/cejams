@@ -1,6 +1,8 @@
 baseurl = "http://ofjamescole.com.s3-website-us-east-1.amazonaws.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+pygmentsstyle = "friendly"
+disqusShortname = "jamescole"
 
 [params]
 	githubName = "tortillaj"
