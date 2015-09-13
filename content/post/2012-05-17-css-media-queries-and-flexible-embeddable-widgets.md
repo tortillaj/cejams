@@ -28,7 +28,7 @@ CSS3 media queries are only supported by IE9 and above — and even IE9′s supp
 
 Fortunately, there’s respond.js, which you can embed into your page to ensure that old versions of IE will load the proper CSS. Respond.js is a small javascript that helps IE support media queries.
 
-Unfortunately, though IE9 in theory supports responsive designs, it actually has problems with iframes that load external CSS files. So unless you’re including all your CSS inside a <style> tag in your page, you need to also get around this problem. As of this writing, the stock version of respond.js doesn’t affect IE9, so we’ve forked it and added some code specifically to account for this scenario. You can get our modified version of respond.js here.
+Unfortunately, though IE9 in theory supports responsive designs, it actually has problems with iframes that load external CSS files. So unless you’re including all your CSS inside a `<style>` tag in your page, you need to also get around this problem. As of this writing, the stock version of respond.js doesn’t affect IE9, so we’ve forked it and added some code specifically to account for this scenario. You can get our modified version of respond.js here.
 
 ## Write the code for embedding your iframe
 
