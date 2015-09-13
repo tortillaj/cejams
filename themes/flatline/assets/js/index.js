@@ -9,8 +9,20 @@
     var $document = $(document);
 
     $document.ready(function () {
+    	var rev = {},
+    		$postContent = $(".post-content"),
+        	$mainHeader = $('header.main-header');
 
-        var $postContent = $(".post-content");
+		$.getJSON('rev-manifest.json', function(data) {
+			rev = data;
+			if ($mainHeader.length) {
+	        	if ($mainHeader.attr('data-bg-image').length && Object.keys(rev).length) {
+	        		var bgImage = rev[$mainHeader.attr('data-bg-image')];
+	        		$mainHeader.css('background-image', 'url("' + bgImage + '")');
+	        	}
+	        }
+		});
+
         $postContent.fitVids();
 
         $(".scroll-down").arctic_scroll();
@@ -19,7 +31,6 @@
             e.preventDefault();
             $("body").toggleClass("nav-opened nav-closed");
         });
-
     });
 
     // Arctic Scroll by Paul Adam Davis

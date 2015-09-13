@@ -3,6 +3,7 @@ var exec = require('child_process').execSync;
 var gutil = require('gulp-util');
 var path = require('path');
 var del = require('del');
+var sequence = require('run-sequence');
 
 function hugo(drafts) {
   var root = path.join(process.cwd(), '../../');
@@ -35,3 +36,7 @@ gulp.task('hugo:delete', function () {
 gulp.task('hugo:live', ['hugo:delete', 'revision'], function () {
   hugo(false);
 });
+
+gulp.task('hugo:dev', function() {
+	sequence('revision', 'hugo:draft');
+})

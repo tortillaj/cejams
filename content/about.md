@@ -5,3 +5,6 @@ title = "about"
 
 +++
 
+About me
+
+Other information too.

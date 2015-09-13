@@ -1,8 +1,8 @@
 var gulp        = require("gulp");
 var browserSync = require("browser-sync");
+var sequence    = require('run-sequence');
 
-gulp.task('serve', ['build:all'], function() {
-    // Serve files from the root of this project
+gulp.task('serve', ['hugo:all'], function() {
     browserSync({
         server: {
             baseDir: "../../public/"
@@ -11,8 +11,8 @@ gulp.task('serve', ['build:all'], function() {
         browser: ['google chrome']
     });
 
-    // add browserSync.reload to the tasks array to make
-    // all browsers reload after tasks are complete.
-    gulp.watch(['../../layouts/**/*', '../../content/**/*', '../../archetypes/**/*'], ['build:content']);
-    gulp.watch(['assets/scss/*.scss', 'assets/js/*.js', 'assets/img/*.*', 'assets/svg/*.svg'], ['build:all']);
+    gulp.watch(['./layouts/**/*', '../../content/**/*', './archetypes/**/*', '../../config.toml', 'theme.toml'], ['hugo:draft'], browserSync.reload);
+    gulp.watch(['assets/scss/*.scss', 'assets/js/*.js', 'assets/img/*.*', 'assets/svg/*.svg', 'assets/layouts/**/*.html'], function() {
+    	sequence('revision:clean', 'revision:create', ['revision:layouts', 'revision:styles'], 'hugo:draft', browserSync.reload);
+    });
 });
