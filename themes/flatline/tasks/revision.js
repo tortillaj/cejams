@@ -15,7 +15,7 @@ gulp.task('revision:clean', function () {
   del.sync('static/rev-manifest.json');
 });
 
-gulp.task('revision:create', ['styles', 'scripts', 'images', 'svg', 'copy:fonts'], function () {
+gulp.task('revision:create', ['styles:dist', 'scripts:dist', 'images', 'svg', 'copy:fonts:tmp'], function () {
   return gulp.src(['.tmp/css/*.css', '.tmp/js/*.js', '.tmp/img/*.*', '.tmp/svg/*.svg', '.tmp/fonts/*.{eot,svg,ttf,woff}'], {base: path.join(process.cwd(), '.tmp')})
     .pipe(rev())
     .pipe(gulp.dest('static'))

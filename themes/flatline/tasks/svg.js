@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var svgmin = require('gulp-svgmin');
 
-// SVG optimization task
 gulp.task('svg', function () {
   return gulp.src('assets/svg/*.svg')
     .pipe(svgmin())
