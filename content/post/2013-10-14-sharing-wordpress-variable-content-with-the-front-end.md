@@ -1,6 +1,6 @@
 +++
 date = "2013-10-14T18:16:24-04:00"
-draft = true
+draft = false
 title = "Sharing WordPress Variable Content with the Front End"
 comments = true
 share = true

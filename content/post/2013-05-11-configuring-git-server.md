@@ -81,7 +81,7 @@ cd ~
 mkdir repo.git
 cd !$
 git --bare init
-{{</highlight}}
+{{< /highlight >}}
 </figure>
 
 ## Codebase Setup
@@ -100,7 +100,7 @@ git remote add origin root@server.com:repo.git
 git push origin master
 git config branch.master.remote origin
 git config branch.master.merge refs/heads/master
-{{</highlight>}}
+{{< /highlight >}}
 </figure>
 
 The final two commands above simply set a default merge and remote.

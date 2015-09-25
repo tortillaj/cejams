@@ -1,6 +1,6 @@
 +++
 date = "2014-05-09T18:12:12-04:00"
-draft = true
+draft = false
 title = "Using Icons in Web Development The Move to SVG"
 author = "james"
 tags = ["design"]
