@@ -1,13 +1,19 @@
 .site-header {
   background-color: $blue;
-  height: 100px;
+  height: $header-height / 2;
+  width: 100%;
   color: $off-white;
   display: flex;
   align-items: center;
   padding: 0 $base-margin;
   box-shadow: $box-shadow-static;
+  position: fixed;
 
   a {
     @include link-colors($off-white, darken($off-white, 5%));
+  }
+
+  @include breakpoint($bp-medium) {
+    height: $header-height;
   }
 }

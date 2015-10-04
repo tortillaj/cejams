@@ -1,0 +1,23 @@
+.site-navigation {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: all 0.3s ease;
+  z-index: 10;
+  height: 100%;
+  width: 80%;
+  top: 0;
+  left: -80%;
+  background-color: $grey-blue;
+  padding: 0;
+  margin: 0;
+
+  &.menu-open {
+    left: 0;
+  }
+
+  @include breakpoint($bp-medium) {
+    width: $flyout-width;
+    left: -1 * $flyout-width;
+  }
+}

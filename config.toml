@@ -3,20 +3,10 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 pygmentsstyle = "friendly"
 disqusShortname = "jamescole"
+SectionPagesMenu = "main"
 
 [params]
-	githubName = "tortillaj"
-	twitterName = "jemilco"
-	cover = "img/philly.png"
+  githubName = "tortillaj"
+  twitterName = "jemilco"
+  cover = "img/philly.png"
 
-[[menu.main]]
-  name = "My Blog"
-  weight = -120
-  identifier = "blog"
-  url = "/"
-
-[[menu.main]]
-  name = "About me"
-  weight = -110
-  identifier = "about"
-  url = "/about"

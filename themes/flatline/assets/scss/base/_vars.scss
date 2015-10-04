@@ -16,7 +16,9 @@ $bp-medium: em(768);
 $bp-small: em(480);
 
 // layouts
-$site-max-width: em(900);
+$site-max-width: em(960);
+$flyout-width: em(420);
+$header-height: em(100);
 $base-margin: em(12);
 $base-margin-double: 2 * $base-margin;
 $base-margin-tripple: 3 * $base-margin;
@@ -25,6 +27,8 @@ $base-margin-tripple: 3 * $base-margin;
 $box-shadow-static: 0 2px 1px rgba($slate, 0.3);
 
 // typography
+$header-serif-stack: Lato,"Helvetica Neue",sans-serif;
+$body-font-stack: "Lucida Grande","Helvetica Neue",Helvetica,Arial,sans-serif;
 $base-font-size: 62.5%;
 $font-size: 16px;
 $line-height: 1.25;

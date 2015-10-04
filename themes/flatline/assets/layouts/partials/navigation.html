@@ -1,5 +1,5 @@
 <header role="banner" class="site-header">
-  <a href="#" class="js-toggle-menu nav-toggle--open">
+  <a href="#" class="js-toggle-menu-open nav-toggle--open">
     <span class="hidden">Menu</span>
   </a>
   {{ if .Site.Params.RSSLink}}
@@ -9,10 +9,19 @@
   {{end}}
 </header>
 <nav class="site-navigation">
-  <a href="#" class="js-toggle-menu nav-toggle--close">
+  <a href="#" class="js-toggle-menu-close nav-toggle--close">
     <span class="hidden">Close</span>
   </a>
-  {{ range .Site.Menus.main }}
-  <a href="{{.URL}}">{{.Name}}</a>
-  {{ end }}
+
+  <ul class="main-menu" role="presentation">
+    {{ $currentNode := . }}
+    {{ range .Site.Menus.main }}
+      <li class="main-menu__item" role="presentation">
+        <a class="main-menu__link" href="{{.URL}}">
+          {{ .Pre }}
+          <span>{{ title .Name }}</span>
+        </a>
+      </li>
+    {{end}}
+    </ul>
 </nav>

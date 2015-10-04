@@ -2,20 +2,14 @@
 
 {{ partial "image-header.html" . }}
 
-<main id="content" class="content" role="main">
+<main class="content" role="main">
+  {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+  <div class="inner">
+  {{ range $index, $page := $paginator.Pages }}
+    {{ partial "li.html" . }}
+  {{ end }}
 
-    {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
-
-    <div class="extra-pagination inner">
-        {{ partial "pagination.html" $paginator }}
-    </div>
-
-    {{ range $index, $page := $paginator.Pages }}
-        {{ partial "li.html" . }}
-    {{ end }}
-
-    {{ partial "pagination.html" $paginator }}
-
+  {{ partial "pagination.html" $paginator }}
 </main>
 
 {{ partial "footer.html" . }}

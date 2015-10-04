@@ -1,0 +1,16 @@
+.site-footer {
+  @include cf;
+  border-top: 1px solid $slate;
+  font-size: 12px;
+  font-size: 1.2rem;
+  padding: $base-margin / 2 0;
+
+  .copyright {
+    width: 50%;
+    float: left;
+  }
+  .poweredby {
+    width: 50%;
+    float: right;
+  }
+}

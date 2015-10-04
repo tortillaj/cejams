@@ -4,19 +4,15 @@
 {{ partial "image-header.html" . }}
 
 <main class="content" role="main">
+  <div class="inner">
     {{ $paginator := .Paginator }}
 
-	<div class="extra-pagination inner">
+    {{ range $index, $page := $paginator.Pages }}
+      {{ partial "li.html" . }}
+    {{ end }}
+
     {{ partial "pagination.html" $paginator }}
-	</div>
-
-	{{ range $index, $page := $paginator.Pages }}
-	   {{ partial "li.html" . }}
-	{{ end }}
-
-	{{ partial "pagination.html" $paginator }}
+  </div>
 </main>
-
-
 
 {{ partial "footer.html" . }}
