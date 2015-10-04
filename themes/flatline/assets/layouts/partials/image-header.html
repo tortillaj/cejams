@@ -1,0 +1,17 @@
+{{ if .Params.cover }}
+<header class="page-header" data-bg-image="{{.Params.cover}}">
+{{ else if .Site.Params.cover}}
+<header class="page-header" data-bg-image="{{.Site.Params.cover}}">
+{{else}}
+<header class="page-header no-cover">
+{{end}}
+<div class="inner">
+  {{ if .Title }}   
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ else }}
+  <h1 class="page-title">{{ .Site.Title }}</h1>
+  {{ end }}
+
+  <!-- h2 class="page-description">{{ .Site.Params.description }}</h2 -->
+  </div>
+</header>

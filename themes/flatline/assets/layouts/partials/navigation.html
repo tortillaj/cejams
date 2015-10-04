@@ -1,23 +1,18 @@
-<div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-        {{ $currentNode := . }}
-        
-        {{ range .Site.Menus.main }}
-            {{.Pre}}
-            <li class="nav-opened{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}} nav-current{{end}}" role="presentation">
-            	<a href="{{.URL}}">{{.Name}}</a>
-            </li>
-        {{end}}
-    </ul>
-    
-    {{ if .Site.Params.RSSLink}}
-    <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
-    {{else}}
-    <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}">Subscribe</a>
-    {{end}}
-</div>
-<span class="nav-cover"></span>
+<header role="banner" class="site-header">
+  <a href="#" class="js-toggle-menu nav-toggle--open">
+    <span class="hidden">Menu</span>
+  </a>
+  {{ if .Site.Params.RSSLink}}
+  <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
+  {{else}}
+  <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}">Subscribe</a>
+  {{end}}
+</header>
+<nav class="site-navigation">
+  <a href="#" class="js-toggle-menu nav-toggle--close">
+    <span class="hidden">Close</span>
+  </a>
+  {{ range .Site.Menus.main }}
+  <a href="{{.URL}}">{{.Name}}</a>
+  {{ end }}
+</nav>

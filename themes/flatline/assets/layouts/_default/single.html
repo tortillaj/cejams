@@ -1,6 +1,9 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
+{{ partial "image-header.html" . }}
+
+
 {{if .Params.image}}
 <header class="main-header post-head" style="background-image: url({{ $baseurl }}{{.Params.image}})">
   <nav class="main-nav overlay clearfix">

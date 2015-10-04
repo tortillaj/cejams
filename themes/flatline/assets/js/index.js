@@ -11,15 +11,17 @@
   $document.ready(function () {
     var rev = {},
       $postContent = $(".post-content"),
-      $mainHeader = $('header.main-header');
+      $mainHeader = $('header.page-header'),
+      $bgImage = $mainHeader.data('bgImage');
 
     $.getJSON('rev-manifest.json', function (data) {
       rev = data;
-      if ($mainHeader.length) {
-        if ($mainHeader.attr('data-bg-image').length && Object.keys(rev).length) {
-          var bgImage = rev[$mainHeader.attr('data-bg-image')];
-          $mainHeader.css('background-image', 'url("' + bgImage + '")');
-        }
+      if ($mainHeader.length && $bgImage.length && Object.keys(rev).length) {
+        $mainHeader.css('background-image', 'url("/' + rev[$bgImage] + '")');
+      } 
+    }).fail(function(error) {
+      if ($mainHeader.length && $bgImage.length) {
+        $mainHeader.css('background-image', 'url("/' + $bgImage + '")');
       }
     });
 

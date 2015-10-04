@@ -1,0 +1,33 @@
+@function em($pixel) {
+  @return $pixel / 16 * 1em;
+}
+
+// colors
+$pink: #E74C3B;
+$off-white: #EDF0F1;
+$blue: #4C9BD8;
+$grey-blue: #3E82B6;
+$slate: #2F3F4F;
+
+// breakpoints
+$bp-large: em(1200);
+$bp-medium-landscape: em(1024);
+$bp-medium: em(768);
+$bp-small: em(480);
+
+// layouts
+$site-max-width: em(900);
+$base-margin: em(12);
+$base-margin-double: 2 * $base-margin;
+$base-margin-tripple: 3 * $base-margin;
+
+// ui
+$box-shadow-static: 0 2px 1px rgba($slate, 0.3);
+
+// typography
+$base-font-size: 62.5%;
+$font-size: 16px;
+$line-height: 1.25;
+$font-color: $slate;
+$link-color: $pink;
+$link-color-hover: darken($pink, 10%);

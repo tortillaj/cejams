@@ -31,6 +31,25 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  font-size: $font-size;
+  font-size: $font-size / 10px * 1rem;
+  line-height: $line-height;
+  color: $font-color;
+}
+
+a {
+  @include link-colors($link-color, $link-color-hover);
+  transition: all 1s ease-in;
+}
+
+
+
 hr {
   padding: 0;
   border: none;
