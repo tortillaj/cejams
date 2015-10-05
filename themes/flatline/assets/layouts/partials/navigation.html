@@ -1,12 +1,14 @@
 <header role="banner" class="site-header">
+  <div class="inner">
   <a href="#" class="js-toggle-menu-open nav-toggle--open">
-    <span class="hidden">Menu</span>
+    <span class="icon-menu"></span> <span class="hidden">Menu</span>
   </a>
   {{ if .Site.Params.RSSLink}}
   <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
   {{else}}
   <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}">Subscribe</a>
   {{end}}
+  </div>
 </header>
 <nav class="site-navigation">
   <a href="#" class="js-toggle-menu-close nav-toggle--close">

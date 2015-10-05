@@ -8,6 +8,7 @@ $off-white: #EDF0F1;
 $blue: #4C9BD8;
 $grey-blue: #3E82B6;
 $slate: #2F3F4F;
+$pale: #eaeaea;
 
 // breakpoints
 $bp-large: em(1200);
@@ -16,9 +17,10 @@ $bp-medium: em(768);
 $bp-small: em(480);
 
 // layouts
-$site-max-width: em(960);
+$site-max-width: em(850);
 $flyout-width: em(420);
-$header-height: em(100);
+$header-height: em(75);
+$image-header-height: 300px;
 $base-margin: em(12);
 $base-margin-double: 2 * $base-margin;
 $base-margin-tripple: 3 * $base-margin;
@@ -27,7 +29,7 @@ $base-margin-tripple: 3 * $base-margin;
 $box-shadow-static: 0 2px 1px rgba($slate, 0.3);
 
 // typography
-$header-serif-stack: Lato,"Helvetica Neue",sans-serif;
+$header-font-stack: Lato,"Helvetica Neue",sans-serif;
 $body-font-stack: "Lucida Grande","Helvetica Neue",Helvetica,Arial,sans-serif;
 $base-font-size: 62.5%;
 $font-size: 16px;

@@ -11,7 +11,7 @@
   $document.ready(function () {
     var rev = {},
       $postContent = $(".post-content"),
-      $mainHeader = $('header.page-header'),
+      $mainHeader = $('header.page__header'),
       $bgImage = $mainHeader.data('bgImage');
 
     $.getJSON('rev-manifest.json', function (data) {

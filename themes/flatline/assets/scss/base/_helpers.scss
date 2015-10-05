@@ -1,0 +1,7 @@
+.hidden {
+  @include visuallyhidden;
+}
+
+.focusable {
+  @include visuallyhidden(true);
+}

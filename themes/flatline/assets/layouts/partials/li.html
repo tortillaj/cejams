@@ -1,12 +1,12 @@
 {{ $baseurl := .Site.BaseURL }}
-<article class="post {{ .Section }}">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+<article class="list__item {{ .Section }}">
+    <header class="list__header">
+        <h2 class="list__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     </header>
-    <section class="post-excerpt">
+    <section class="list__excerpt">
         <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
     </section>
-    <footer class="post-meta">
+    <footer class="list__meta">
         {{if .Site.Params.logo }}
             <img class="author-thumb" src="{{ .Site.BaseURL }}{{.Site.Params.logo}}" alt="Author image" nopin="nopin" />
         {{end}}
@@ -18,10 +18,10 @@
         {{end}}
         {{if .Params.tags }}on
             {{ range $index, $tag := .Params.tags }}
-                <a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>,
+                <a class="tags" href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>,
             {{ end }}
         {{end}}
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+        <time class="list__date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
             {{ .Date.Format "2 Jan 2006" }}
         </time>
     </footer>

@@ -43,12 +43,39 @@ body {
   color: $font-color;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-stack;
+  &:first-child {
+    margin-top: 0;
+  }
+  a {
+    @include link-colors($slate, lighten($slate, 5%));
+  }
+}
+
+p {
+  margin: $base-margin / 2 0;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin: 0;
+  }
+}
+
 a {
   @include link-colors($link-color, $link-color-hover);
   transition: all 1s ease-in;
+  text-decoration: none;
+
+  &.read-more {
+    @include link-colors($slate, darken($slate, 10%));
+  }
 }
 
-
+pre {
+  padding: $base-margin-double;
+}
 
 hr {
   padding: 0;
@@ -67,4 +94,10 @@ hr {
     padding: 0 0.25em;
     background: #f6f6f6;
   }
+}
+
+::selection { 
+  background: $pink; 
+  color: #fff; 
+  text-shadow: none; 
 }

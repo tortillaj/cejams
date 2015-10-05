@@ -1,0 +1,13 @@
+.page {
+
+  &__header {
+    height: $image-header-height;
+    background-size: cover;
+    color: $off-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: $base-margin-double;
+    margin-bottom: $base-margin-double;
+  }
+}

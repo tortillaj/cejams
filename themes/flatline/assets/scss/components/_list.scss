@@ -1,0 +1,22 @@
+.list {
+  &__item {
+    margin: $base-margin 0;
+    border-bottom: 1px dashed $pale;
+    padding-bottom: $base-margin;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__meta {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}

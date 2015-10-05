@@ -1,10 +1,13 @@
 .site-footer {
   @include cf;
-  border-top: 1px solid $slate;
+  color: lighten($slate,15%);
+  border-top: 1px solid $pale;
   font-size: 12px;
   font-size: 1.2rem;
-  padding: $base-margin / 2 0;
-
+  padding: $base-margin 0;
+  a {
+    @include link-colors(lighten($slate,20%));
+  }
   .copyright {
     width: 50%;
     float: left;
@@ -12,5 +15,6 @@
   .poweredby {
     width: 50%;
     float: right;
+    text-align: right;
   }
 }
