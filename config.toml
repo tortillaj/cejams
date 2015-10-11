@@ -8,5 +8,9 @@ SectionPagesMenu = "main"
 [params]
   githubName = "tortillaj"
   twitterName = "jemilco"
+  facebookName = ""
+  linkedinName = ""
+  instagramName = ""
+  dribbbleName = ""
   cover = "img/philly.png"
 

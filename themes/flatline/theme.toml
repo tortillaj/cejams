@@ -1,8 +1,8 @@
 name = "Flatline"
 license = "MIT"
-licenselink = "https://github.com/vjeantet/hugo-theme-casper/blob/master/LICENSE.md"
+licenselink = "https://github.com/tortillaj/hugo-theme-flatline/blob/master/LICENSE.md"
 description = "Flatline Theme for Hugo"
-homepage = "http://vjeantet.fr/"
+homepage = "http://flatline.ofjamescole.com/"
 tags = ["blog"]
 features = ["gulp", "disqus", "google analytics", "share"]
 min_version=0.14

@@ -20,4 +20,56 @@
     width: $flyout-width;
     left: -1 * $flyout-width;
   }
+
+  &__header {
+    display: block;
+    width: 100%;
+    height: 300px;
+    background: url('../images/trees_1280.jpg') top left no-repeat transparent;
+    background-size: cover;
+  }
+}
+
+.nav-toggle {
+  &--close {
+    @include rem(font-size, 20px);
+    display: inline-block;
+    @include link-colors($off-white);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    margin: 0;
+    border-bottom: 1px solid $grey-blue-dark;
+    border-top: 1px solid $grey-blue;
+    list-style-type: none;
+  }
+
+  &__link {
+    @include link-colors($off-white, white);
+    display: block;
+    padding: em(15) em(10);
+    &:hover {
+      background-color: $grey-blue-dark;
+    }
+  }
+
+  &--social {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      border: none;
+    }
+    a {
+      padding: em(15);
+    }
+  }
 }
