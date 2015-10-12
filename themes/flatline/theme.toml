@@ -10,4 +10,4 @@ min_version=0.14
 [author]
   name = "James Cole"
   homepage = "http://ofjamescole.com"
-
+  image = "img/self.jpeg"
