@@ -10,6 +10,7 @@
   {{end}}
   </div>
 </header>
+
 <nav class="site-navigation" aria-labelledby="mainNavigation">
   <h2 class="hidden" id="mainNavigation">Primary Navigation Menu</h2>
 
@@ -17,7 +18,10 @@
     <span class="icon-close"></span> <span class="hidden">Close</span>
   </a>
   
-  <span class="site-navigation__header"></span>
+  <div class="site-navigation__container" role="presentation">
+  <div class="site-navigation__header" role="presentation">
+    {{ partial "author.html" . }}
+  </div>
   
   <ul class="main-menu" role="presentation">
     {{ $currentNode := . }}
@@ -34,42 +38,42 @@
       <ul class="main-menu--social" role="presentation">
           {{if .Site.Params.githubName}}
           <li role="presentation" class="main-menu__item">
-            <a href="https://github.com/{{.Site.Params.githubName}}" target="_blank" title="Find me on Github" class="main-menu__link">
+            <a href="https://github.com/{{.Site.Params.githubName}}" target="_blank" title="Find me on Github" class="main-menu__link github">
               <span class="icon-github"><span class="hidden">Github</span>
             </a>
           </li>
           {{end}}
           {{if .Site.Params.twitterName}}
           <li role="presentation" class="main-menu__item">
-            <a href="https://twitter.com/{{.Site.Params.twitterName}}" target="_blank" title="Find me on Twitter" class="main-menu__link">
+            <a href="https://twitter.com/{{.Site.Params.twitterName}}" target="_blank" title="Find me on Twitter" class="main-menu__link twitter">
               <span class="icon-twitter"><span class="hidden">Twitter</span>
             </a>
           </li>
           {{end}}
           {{if .Site.Params.facebookName}}
           <li role="presentation" class="main-menu__item">
-            <a href="https://facebook.com/{{.Site.Params.facebookName}}" target="_blank" title="Find me on Facebook" class="main-menu__link">
+            <a href="https://facebook.com/{{.Site.Params.facebookName}}" target="_blank" title="Find me on Facebook" class="main-menu__link facebook">
               <span class="icon-facebook"><span class="hidden">Facebook</span>
             </a>
           </li>
           {{end}}
           {{if .Site.Params.dribbbleName}}
           <li role="presentation" class="main-menu__item">
-            <a href="https://dribbble.com/{{.Site.Params.dribbbleName}}" target="_blank" title="Find me on Dribbble" class="main-menu__link">
+            <a href="https://dribbble.com/{{.Site.Params.dribbbleName}}" target="_blank" title="Find me on Dribbble" class="main-menu__link dribbble">
               <span class="icon-dribbble"><span class="hidden">Dribbble</span>
             </a>
           </li>
           {{end}}
           {{if .Site.Params.instagramName}}
           <li role="presentation" class="main-menu__item">
-            <a href="https://instagram.com/{{.Site.Params.instagramName}}" target="_blank" title="Find me on Instagram" class="main-menu__link">
+            <a href="https://instagram.com/{{.Site.Params.instagramName}}" target="_blank" title="Find me on Instagram" class="main-menu__link instagram">
               <span class="icon-instagram"></span><span class="hidden">Instagram</span>
             </a>
           </li>
           {{end}}
           {{if .Site.Params.linkedinName}}
           <li role="presentation" class="main-menu__item">  
-            <a href="https://linkedin.com/u/{{.Site.Params.linkedinName}}" target="_blank" title="Find me on LinkedIn" class="main-menu__link">
+            <a href="https://linkedin.com/u/{{.Site.Params.linkedinName}}" target="_blank" title="Find me on LinkedIn" class="main-menu__link linkedin">
               <span class="icon-linkedin"><span class="hidden">LinkedIn</span>
             </a>
           </li>
@@ -77,4 +81,5 @@
       </ul>
     </li>
   </ul>
+  </div>
 </nav>

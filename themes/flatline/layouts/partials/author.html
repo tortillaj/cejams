@@ -2,18 +2,22 @@
 {{$author := index .Site.Data.authors (or .Params.author .Site.Params.author)}}
 {{$authorname := or $author.name .Site.Params.author }}
 {{$authorbio := or $author.bio .Site.Params.bio }}
+{{$authorimage := or $author.image .Site.Params.authorimage }}
 {{$authorlocation := or $author.location .Site.Params.authorlocation }}
 {{$authorwebsite := or $author.website .Site.Params.authorwebsite }}
 <section class="author">
-  <h4><a href="{{.Site.BaseURL}}">{{$authorname}}</a></h4>
-  {{if $authorbio}}
-  <p>{{$authorbio}}</p>
-  {{else}}
-  <p>Read <a href="{{.Site.BaseURL}}">more posts</a> by this author.</p>
+  {{if $authorimage}}
+  <img src="/{{$authorimage}}" alt="author image" class="author__image" />
   {{end}}
-  <div class="author-meta">
-    {{with $authorlocation}}<span class="author-location icon-location">{{.}}</span>{{end}}
-    {{with $authorwebsite}}<span class="author-link icon-link"><a href="{{.}}">{{.}}</a></span>{{end}}
+  <h4 class="author__name"><a href="{{.Site.BaseURL}}">{{$authorname}}</a></h4>
+  {{if $authorbio}}
+  <p class="author__bio">{{$authorbio}}</p>
+  {{else}}
+  <p class="author__bio">Read <a href="{{.Site.BaseURL}}">more posts</a> by this author.</p>
+  {{end}}
+  <div class="author__meta">
+    {{with $authorlocation}}<span class="author__location"><i class="icon-location"></i> {{.}}</span>{{end}}
+    {{with $authorwebsite}}<span class="author__link"><i class="icon-link"></i> <a href="{{.}}">{{.}}</a></span>{{end}}
   </div>
 </section>
 {{end}}
