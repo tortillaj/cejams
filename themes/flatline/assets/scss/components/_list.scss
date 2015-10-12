@@ -1,8 +1,8 @@
 .list {
   &__item {
-    margin: $base-margin 0;
+    margin: $base-margin-double 0;
     border-bottom: 1px dashed $pale;
-    padding-bottom: $base-margin;
+    padding-bottom: $base-margin-double;
 
     &:first-child {
       margin-top: 0;

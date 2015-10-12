@@ -1,0 +1,21 @@
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    width: 100px;
+    border-radius: 50%;
+    border: 7px double $grey-dark;
+  }
+
+  &__name {
+    @include rem(font-size, 18px);
+    margin: 0;
+  }
+
+  &__meta {
+    @include rem(font-size, 14px);
+  }
+}
+

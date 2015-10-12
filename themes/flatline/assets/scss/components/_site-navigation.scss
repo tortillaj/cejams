@@ -1,19 +1,19 @@
 .site-navigation {
   position: fixed;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   transition: all 0.3s ease;
   z-index: 10;
   height: 100%;
   width: 80%;
   top: 0;
   left: -80%;
-  background-color: $grey-blue;
+  background-color: $grey;
   padding: 0;
   margin: 0;
 
   &.menu-open {
     left: 0;
+    box-shadow: 0 0px 40px rgba($grey-dark, 0.8);
   }
 
   @include breakpoint($bp-medium) {
@@ -21,20 +21,35 @@
     left: -1 * $flyout-width;
   }
 
+  &__container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 105%;
+
+    @include breakpoint($bp-medium) {
+      width: ($flyout-width / 1em * 16px + 15px) / 16px * 1em;
+    }
+  }
+
   &__header {
     display: block;
     width: 100%;
-    height: 300px;
-    background: url('../images/trees_1280.jpg') top left no-repeat transparent;
+    height: 250px;
+    padding: 30px 20px 10px;
+    background: url('../img/trees_1280.jpg') top left no-repeat transparent;
     background-size: cover;
+    color: $grey-light;
+    a {
+      @include link-colors($pale);
+    }
   }
 }
 
 .nav-toggle {
   &--close {
     @include rem(font-size, 20px);
-    display: inline-block;
     @include link-colors($off-white);
+    display: inline-block;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -47,21 +62,23 @@
 
   &__item {
     margin: 0;
-    border-bottom: 1px solid $grey-blue-dark;
-    border-top: 1px solid $grey-blue;
     list-style-type: none;
   }
 
   &__link {
     @include link-colors($off-white, white);
     display: block;
-    padding: em(15) em(10);
+    padding: 15px 10px 15px 13px;
+    transition: none;
     &:hover {
-      background-color: $grey-blue-dark;
+      border-left: 3px solid $grey-blue-dark;
+      padding-left: 10px;
+      background-color: $grey-dark;
     }
   }
 
   &--social {
+    text-align: center;
     margin: 0;
     padding: 0;
     li {
@@ -69,7 +86,12 @@
       border: none;
     }
     a {
-      padding: em(15);
+      padding: 10px 12px 7px;
+      &:hover {
+        border-radius: 50%;
+        border: none;
+        padding: 10px 12px 7px;
+      }
     }
   }
 }

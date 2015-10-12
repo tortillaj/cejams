@@ -1,5 +1,5 @@
 .site-header {
-  background-color: $blue;
+  background-color: $grey-light;
   height: $header-height / 2;
   width: 100%;
   color: $off-white;
@@ -8,6 +8,7 @@
   padding: 0 $base-margin;
   box-shadow: $box-shadow-static;
   position: fixed;
+  z-index: 5;
 
   a {
     @include link-colors($off-white, darken($off-white, 5%));

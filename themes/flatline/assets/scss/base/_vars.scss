@@ -9,6 +9,9 @@ $blue: #4C9BD8;
 $blue-dark: darken($blue, 8%);
 $grey-blue: #3E82B6;
 $grey-blue-dark: darken($grey-blue, 8%);
+$grey: #4C525C;
+$grey-light: lighten($grey, 20%);
+$grey-dark: #3E4450;
 $slate: #2F3F4F;
 $pale: #eaeaea;
 
@@ -28,14 +31,14 @@ $base-margin-double: 2 * $base-margin;
 $base-margin-tripple: 3 * $base-margin;
 
 // ui
-$box-shadow-static: 0 2px 1px rgba($slate, 0.3);
+$box-shadow-static: 0 0 10px rgba($grey-dark, 0.3);
 
 // typography
 $header-font-stack: Lato,"Helvetica Neue",sans-serif;
 $body-font-stack: "Lucida Grande","Helvetica Neue",Helvetica,Arial,sans-serif;
 $base-font-size: 62.5%;
 $font-size: 16px;
-$line-height: 1.25;
+$line-height: 1.5;
 $font-color: $slate;
-$link-color: $pink;
-$link-color-hover: darken($pink, 10%);
+$link-color: $grey-blue;
+$link-color-hover: $grey-blue-dark;
