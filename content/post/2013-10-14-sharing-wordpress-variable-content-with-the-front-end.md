@@ -10,6 +10,8 @@ tags = ["wordpress", "php", "javascript"]
 
 Many times when working on WordPress sites, you’ll find yourself wanting to pass variables entered into the WordPress admin system to the front end for use in Javascript.
 
+<!--more-->
+
 ## Common Use Cases
 
 There are many reasons you might want to accomplish this task. For example, you may have a plugin where a user enters parameters like speed, duration, and transition effects for a slider through the WordPress admin. On the front end, when creating this slider in Javascript, you’ll want to collect those parameters to control the slider. A second example might be a case where a user can select options for an accordion or tabbed interface, and on the front end you use Javascript to enable or disable those settings.

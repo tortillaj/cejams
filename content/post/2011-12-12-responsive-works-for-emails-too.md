@@ -9,7 +9,7 @@ share = true
 +++
 
 In the past, accommodating different email systems has largely consisted of simply offering an HTML formatted message, and a “plain text” version of the message for those who can’t (or won’t) receive HTML emails.
-
+<!--more-->
 But unlike those in the past, today’s mobile phones do actually support HTML-formatted messages. While best practices for email template design have dictated a narrower width than typically used for web pages (usually 600 pixels vs. 980), even this narrower approach is problematic for all but the largest mobile screens, leaving your users either looking at tiny text or having to scroll horizontally to see your text.
 
 This is particularly important when you consider that the share of email read on a mobile device is now around 25% and growing (based on trends from a year ago). Fortunately, the same responsive design techniques used for making websites mobile-friendly can be used in HTML email templates! Though CSS support among email clients varies significantly, popular mobile email clients (like those for the iPhone, iPad and Android) correctly understand an interpret CSS3 media-queries.

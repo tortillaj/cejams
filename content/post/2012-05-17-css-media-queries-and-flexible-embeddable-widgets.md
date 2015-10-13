@@ -9,7 +9,7 @@ share = true
 +++
 
 While CSS3’s media queries are typically used in service of responsive design, we’ve identified another use for them: embeddable widgets.
-
+<!--more-->
 It’s not uncommon for an organization to want to offer to its customers / supporters something they can quickly post onto their own websites, such as a poll or artwork announcing an upcoming event or current campaign/sale. In the case of images, the typical approach has been to offer several variants at some standard sizes and let the users choose which to embed. For more dynamic content, such as a poll or Twitter feed, users are typically presented with a fixed size.
 
 Combining CSS3 media queries with iframes, however, gives you the ability to offer embeddable content that adapts its layout to the space given. You can offer one layout for columns only 150 pixels wide, one for 150-300 pixels, and another for when your widget is over 300 pixels wide, for example. Here’s how we’d recommend approaching this:

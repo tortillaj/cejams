@@ -10,6 +10,8 @@ share = true
 
 SVG, Scalable Vector Graphics, is an XML format for 2D graphics. As the name implies, a document in SVG format can scale to any size, effectively filling up any size container. Also, being a vector based format means that each portion of the graphical image is actually comprised of primitive parts, called “paths.” These paths are the most primitive parts of an image, like points, straight lines, and curved lines.
 
+<!--more-->
+
 ## Background
 
 Most regular image formats we use on the web, like JPEG and PNG, are made up of a dot matrix structure. We usually think of those as pixels when working with the web. A complex image like a mountainous landscape can be made up of thousands of pixels or a few hundred, and that simply depends on the resolution at which the image was processed. These types of images are raster graphics.

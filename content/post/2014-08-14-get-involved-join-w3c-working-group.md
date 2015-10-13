@@ -10,6 +10,8 @@ tags = ["development"]
 
 A few years ago, an initiative called Move the Web Forward was launched to help developers and technical folks get involved with creating standards for web technologies. The project links to various methods and projects to give back to the web community. One of those suggested projects involves W3C Working Groups.
 
+<!--more-->
+
 The working groups are made up of professionals, experts, and employer-sponsored members. Their main tasks are related to maintaining web standards, creating new standards, and disseminating guidelines for implementing standards.
 
 Currently, W3C groups exist for a very wide range of technologies, from SVG to HTML5, and audio / video implementations to accessibility issues. Taking part in groups is usually not a big commitment, as your involvement is at your own discretion. In general you’ll partake in email newsletters and other group conversations as they arise.

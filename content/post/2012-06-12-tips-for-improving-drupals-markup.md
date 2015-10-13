@@ -10,6 +10,8 @@ author = "james"
 
 Drupal is an incredibly powerful, sophisticated platform and CMS. But like all software, it’s not without its weaknesses. And due to design decisions that place the needs of site maintainers over front-end developers and themers, it can be quite labor-intensive to make Drupal spit out beautiful, semantic HTML5 (POSH) that facilitates fast page loads, search engine processing, DOM manipulation, and the like.
 
+<!--more-->
+
 The Drupal developer community is aware of this shortcoming, and work is already under way to improve the theme layer in Drupal 8 so that those who care about good markup can craft it without having to learn the intricacies of template files, hooks, and so on. But until Drupal 8 comes out, what’s a front-end developer to do?
 
 ## Start with a good base theme

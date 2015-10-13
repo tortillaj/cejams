@@ -11,6 +11,8 @@ tags = ["devops", "git"]
 
 Of all version control systems, Git has proved most versatile and robust, at least for the needs of my employers and me. Currently, [Github](http://github.com) is by far the most popular hosted Git service, and is a wonderful way to make coding social or collaborate on someone else's project.
 
+<!--more-->
+
 However, you may find yourself working on project that you want to keep private for a while, and you don&rsquo;t want to pay Github&rsquo;s service fees for whatever reason. In this case, you want a private Git repo and server.
 
 Though there are hosted alternatives to Github that allow this, like [Bitbucket](http://bitbucket.org), this article outlines how to set one up on your private server provided by [Digital Ocean](https://www.digitalocean.com/?refcode=7b51e336e6a2).

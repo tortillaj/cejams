@@ -10,6 +10,8 @@ author = "james"
 
 While the Razor syntax provided in the View layer for .NET apps is very powerful, it isn’t always as flexible as you need, and won’t always provide you with friendly markup on the front end. At the same time, there may be instances where you’d like to decouple your front end from the back end, and in those cases you most likely won’t want to use Razor at all in favor of plain HTML.
 
+<!--more-->
+
 ## Background
 
 AngularJS is a fantastic Javascript MVC framework. It has exploded in popularity, virtually overtaking other frameworks like Backbone and Ember. AngularJS provides some amazing capabilities out of the box, and can convert your non-trivial jQuery based apps into something more powerful and yet more simple to maintain.

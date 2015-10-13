@@ -10,6 +10,8 @@ share = true
 
 Creating HTML email templates can seem like a lesson in navigating minefields, due in part to the many various email clients and systems that process emails. In this article, I’ll focus on tips for creating responsive email templates in Microsoft Outlook.
 
+<!--more-->
+
 ## How Outlook Works
 
 If your newsletter subscribers or clients are in an office setting in the United States, they’re likely using Outlook to view emails. The software has been around since at least 1997, going through several changes over time as Microsoft hones its support.
