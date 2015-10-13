@@ -4,9 +4,9 @@
     <span class="icon-menu"></span> <span class="hidden">Menu</span>
   </a>
   {{ if .Site.Params.RSSLink}}
-  <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
+  <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}" title="Subscribe"><span class="hidden">Subscribe</span></a>
   {{else}}
-  <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}">Subscribe</a>
+  <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}" title="Subscribe"><span class="hidden">Subscribe</span></a>
   {{end}}
   </div>
 </header>

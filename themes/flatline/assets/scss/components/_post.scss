@@ -1,0 +1,30 @@
+.post {
+  &__meta {
+    @extend %small;
+    padding: 0 $base-margin / 2;
+    background-color: $pale;
+    margin-bottom: $base-margin;
+  }
+
+  &__date,
+  &__tag {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  &__footer {
+    .author {
+      background-color: $pale;
+      padding: $base-margin;
+      margin: $base-margin 0;
+    }
+    .share {
+      h4, a {
+        @include rem(font-size, $font-size);
+        @include rem(line-height, $line-height);
+        display: inline-block;
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+}

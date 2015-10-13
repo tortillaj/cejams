@@ -4,7 +4,7 @@
         <h2 class="list__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     </header>
     <section class="list__excerpt">
-        <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
+        {{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a>
     </section>
     <footer class="list__meta">
         {{if .Site.Params.logo }}

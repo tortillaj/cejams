@@ -10,12 +10,16 @@
   }
 
   &__name {
-    @include rem(font-size, 18px);
+    font-size: 120%;
     margin: 0;
   }
 
+  &__bio {
+    margin: 5px 0;
+  }
+
   &__meta {
-    @include rem(font-size, 14px);
+    font-size: 60%;
   }
 }
 

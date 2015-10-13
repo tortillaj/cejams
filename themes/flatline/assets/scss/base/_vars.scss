@@ -14,6 +14,7 @@ $grey-light: lighten($grey, 20%);
 $grey-dark: #3E4450;
 $slate: #2F3F4F;
 $pale: #eaeaea;
+$pale-dark: darken($pale, 10%);
 
 // breakpoints
 $bp-large: em(1200);
@@ -22,23 +23,23 @@ $bp-medium: em(768);
 $bp-small: em(480);
 
 // layouts
-$site-max-width: em(850);
-$flyout-width: em(420);
-$header-height: em(75);
-$image-header-height: 300px;
-$base-margin: em(12);
+$site-max-width: 760px;
+$flyout-width: 420px;
+$header-height: 75px;
+$image-header-height: 360px;
+$base-margin: 29px;
 $base-margin-double: 2 * $base-margin;
-$base-margin-tripple: 3 * $base-margin;
+$base-margin-triple: 3 * $base-margin;
 
 // ui
-$box-shadow-static: 0 0 10px rgba($grey-dark, 0.3);
+$box-shadow-static: 0 2px 15px rgba($grey-dark, 0.5);
 
 // typography
 $header-font-stack: Lato,"Helvetica Neue",sans-serif;
 $body-font-stack: "Lucida Grande","Helvetica Neue",Helvetica,Arial,sans-serif;
 $base-font-size: 62.5%;
-$font-size: 16px;
-$line-height: 1.5;
+$font-size: 19px;
+$line-height: 19px * 1.525;
 $font-color: $slate;
 $link-color: $grey-blue;
 $link-color-hover: $grey-blue-dark;

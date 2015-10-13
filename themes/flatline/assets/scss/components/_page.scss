@@ -1,13 +1,18 @@
 .page {
-
   &__header {
-    height: $image-header-height;
+    min-height: $image-header-height;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: $off-white;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: $base-margin-double;
+    padding: $base-margin 0;
+    text-shadow: 0 2px 2px rgba($slate, 0.7);
+  }
+
+  &__content {
     margin-bottom: $base-margin-double;
   }
 }

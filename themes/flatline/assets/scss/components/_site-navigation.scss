@@ -13,7 +13,7 @@
 
   &.menu-open {
     left: 0;
-    box-shadow: 0 0px 40px rgba($grey-dark, 0.8);
+    box-shadow: 0 4px 40px rgba(black, 0.8);
   }
 
   @include breakpoint($bp-medium) {
@@ -27,7 +27,7 @@
     width: 105%;
 
     @include breakpoint($bp-medium) {
-      width: ($flyout-width / 1em * 16px + 15px) / 16px * 1em;
+      width: $flyout-width + 15px;
     }
   }
 
@@ -40,14 +40,14 @@
     background-size: cover;
     color: $grey-light;
     a {
-      @include link-colors($pale);
+      @include link-colors($pale-dark);
     }
   }
 }
 
 .nav-toggle {
   &--close {
-    @include rem(font-size, 20px);
+    @include rem(font-size, 30px);
     @include link-colors($off-white);
     display: inline-block;
     position: absolute;
@@ -68,10 +68,10 @@
   &__link {
     @include link-colors($off-white, white);
     display: block;
-    padding: 15px 10px 15px 13px;
+    padding: 15px 10px 15px 15px;
     transition: none;
     &:hover {
-      border-left: 3px solid $grey-blue-dark;
+      border-left: 5px solid $blue;
       padding-left: 10px;
       background-color: $grey-dark;
     }
@@ -90,7 +90,7 @@
       &:hover {
         border-radius: 50%;
         border: none;
-        padding: 10px 12px 7px;
+        padding: 10px 12px 6px;
       }
     }
   }

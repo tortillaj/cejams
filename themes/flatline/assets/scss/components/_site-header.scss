@@ -1,5 +1,5 @@
 .site-header {
-  background-color: $grey-light;
+  background-color: rgba($grey, 0.8);
   height: $header-height / 2;
   width: 100%;
   color: $off-white;
@@ -12,6 +12,18 @@
 
   a {
     @include link-colors($off-white, darken($off-white, 5%));
+    @include rem(font-size, 30px);
+    padding: 10px;
+    display: inline-block;
+
+    &:hover {
+      background-color: $grey-dark;
+      border-radius: 5px;
+    }
+  }
+
+  .subscribe-button {
+    float: right;
   }
 
   @include breakpoint($bp-medium) {
