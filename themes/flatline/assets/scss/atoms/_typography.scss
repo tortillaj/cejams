@@ -17,11 +17,14 @@
 
 html {
   font-size: $base-font-size;
+
+  * {
+    @include rem(font-size, $font-size);
+    @include rem(line-height, $line-height);
+  }
 }
 
 body {
-  @include rem(font-size, $font-size);
-  @include rem(line-height, $line-height);
   font-family: Lato, Helvetica, sans-serif;
 }
 
