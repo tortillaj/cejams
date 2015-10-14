@@ -30,9 +30,7 @@
     }
 
     if (typeof $.fn.oembed === "function") {
-      $('.js-oembed').oembed({ 
-        includeHandle: false 
-      });
+      $('.js-oembed').oembed();
     }
 
   });

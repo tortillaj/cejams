@@ -363,7 +363,8 @@
                 container.html(oembedData.code);
                 break;
             case "append":
-                container.wrap('<div class="oembedall-container"></div>');
+                var providerClass = oembedData.provider_name.replace(/[^a-zA-Z]+/g, '').toLowerCase();
+                container.wrap('<div class="oembedall-container provider-' + providerClass + '"></div>');
                 var oembedContainer = container.parent();
                 if (settings.includeHandle) {
                     $('<span class="oembedall-closehide">&darr;</span>').insertBefore(container).click(function () {

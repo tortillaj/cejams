@@ -3,7 +3,7 @@
 {{ partial "image-header.html" . }}
 
 <main class="page__content" role="main">
-  {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+{{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
   <div class="inner list">
   {{ range $index, $page := $paginator.Pages }}
     {{ partial "li.html" . }}
