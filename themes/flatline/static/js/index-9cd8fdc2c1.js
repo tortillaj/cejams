@@ -1,1 +1,0 @@
-!function(e,n){"use strict";var t=e(document);t.ready(function(){var n={},t=e(".post-content"),a=e("header.page__header"),g=a.data("bgImage");e.getJSON("rev-manifest.json",function(e){n=e,a.length&&g.length&&Object.keys(n).length&&a.css("background-image",'url("/'+n[g]+'")')}).fail(function(e){a.length&&g.length&&a.css("background-image",'url("/'+g+'")')}),t.fitVids()})}(jQuery);
