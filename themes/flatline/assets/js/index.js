@@ -24,8 +24,16 @@
         $mainHeader.css('background-image', 'url("/' + $bgImage + '")');
       }
     });
+    
+    if (typeof $.fn.fitVids === "function") {
+      $postContent.fitVids();
+    }
 
-    $postContent.fitVids();
+    if (typeof $.fn.oembed === "function") {
+      $('.js-oembed').oembed({ 
+        includeHandle: false 
+      });
+    }
 
   });
 
