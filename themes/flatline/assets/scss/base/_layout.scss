@@ -5,6 +5,14 @@
   }
 }
 
+body.smaller {
+  .site-wrapper {
+    @include breakpoint($bp-medium) {
+      padding-top: $header-height * .6;
+    }
+  }
+}
+
 .inner {
   margin: 0 auto;
   width: 95%;

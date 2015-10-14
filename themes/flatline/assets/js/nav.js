@@ -20,4 +20,14 @@
       });
     });
 
+  window.addEventListener( "scroll", function(e) {
+    var body = document.getElementsByTagName("body")[0];
+
+    if (window.scrollY && window.scrollY > 60) {
+      classie.add( body, "smaller" );
+    } else {
+      classie.remove( body, "smaller" );
+    }
+  });
+
 })( window );
