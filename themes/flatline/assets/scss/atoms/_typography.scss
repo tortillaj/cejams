@@ -83,7 +83,7 @@ em {
 
 a {
   @include link-colors($link-color, $link-color-hover);
-  transition: all 1s ease-in;
+  transition: all .25s ease-in;
   text-decoration: none;
 
   &.read-more {

@@ -15,6 +15,7 @@
     @include rem(font-size, 30px);
     padding: 10px;
     display: inline-block;
+    line-height: 1;
 
     &:hover {
       background-color: $grey-dark;
@@ -28,5 +29,17 @@
 
   @include breakpoint($bp-medium) {
     height: $header-height;
+    transition: all .25s ease;
+  }
+}
+
+body.smaller {
+  .site-header {
+    height: $header-height * .6;
+
+    a {
+      @include rem(font-size, 18px);
+      padding: 5px;
+    }
   }
 }
