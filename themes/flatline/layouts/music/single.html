@@ -1,0 +1,63 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<div class="hidden">
+{{ partial "image-header.html" . }}
+</div>
+
+<main class="page__content" role="main">
+  <article class="inner post {{ .Section }}">
+    <header class="post__header">
+        <h1 class="post__title">{{.Title}}</h1>
+    </header>
+    
+    <section class="post__content">
+      {{ .Content }}
+    </section>
+
+    {{if (isset .Params "embed_url") and not (eq .Params.embed_url "") }}
+    <section class="post__embed">
+      <a href="{{.Params.embed_url}}" class="js-oembed post__embed-link"></a>
+    </section>
+    {{end}}
+    
+    <footer class="post__footer">
+      {{ partial "author.html" . }}
+
+      {{ if ne .Params.share false}}
+      <section class="share">
+        <h4>Share this {{ if .Type }}{{.Type}}{{else}}post{{end}}</h4>
+        <a class="icon-twitter" href="https://twitter.com/share?text={{ .Title | safeHTML}}&amp;url={{ .Permalink }}"
+          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <span class="hidden">Twitter</span>
+        </a>
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
+          onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <span class="hidden">Facebook</span>
+        </a>
+        <a class="icon-google-plus" href="https://plus.google.com/share?url={{ .Permalink }}"
+         onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <span class="hidden">Google+</span>
+        </a>
+      </section>
+      {{end}}
+
+      {{ if ne .Params.comments false}}
+      {{ with .Site.DisqusShortname }}
+      <div class="post__comments" id="disqus_thread"></div>
+      <script type="text/javascript">
+      var disqus_shortname = '{{ . }}';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      {{ end }}
+      {{ end }}
+
+    </footer>
+  </article>
+</main>
+{{ partial "footer.html" . }}
